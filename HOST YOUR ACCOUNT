@@ -1,0 +1,40 @@
+First 
+go to https://replit.com and create node.js
+Second 
+Paste this code into index.js 
+const Eris = require("eris");
+const keepAlive = require("./server");
+keepAlive();
+
+const bot = new Eris(process.env.TOKEN);
+
+bot.connect();
+const mySecret = process.env['TOKEN']
+
+Third
+You will see a thing called "SECRET" on your repl page go there paste in front place "TOKEN" and in another "your discord token" 
+and press save a secret is basically replit secret env file where 
+you can hide your code or specific keys like token of discord.
+Fourth
+Above your index file you will see a plus "+" file sign click that 
+and create file server.js and paste this code in it.
+
+const express = require("express");
+const server = express();
+
+server.all("/", (req, res) => {
+  res.send("Your account is alive!");
+});
+
+function keepAlive() {
+  server.listen(3000, () => {
+    console.log("Server is Ready!");
+  });
+}
+
+module.exports = keepAlive;
+
+Fitih : start / run the replit you will see sign on middle top green button and press it when you start it it will have webview on, 
+which will have a link copy the link and make an account using same temp mail from above, make account on uptimerobot.com 
+once made go on page and go to dashboard after verifying and click add new monitor https://media.discordapp.net/attachments/1064291896026996898/1125059286951792680/image.png
+then click HTTPS  and put URL (or IP) your link and press create!
